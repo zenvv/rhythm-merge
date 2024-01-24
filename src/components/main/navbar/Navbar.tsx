@@ -3,21 +3,25 @@ import rmIcon from "@@/rm/rm-icon.png";
 import NavButton from "./NavButton";
 import { DiscIcon, HomeIcon, MixIcon, StarIcon } from "@radix-ui/react-icons";
 import SearchBar from "./Searchbar";
+import Link from "next/link";
 
 function Navbar() {
   return (
     <div className="fixed z-10 flex h-32 w-full flex-col items-center justify-between bg-zinc-900 pt-4">
       <span className="flex w-full max-w-5xl items-center justify-start gap-4 text-white transition-all">
-        <span className="p-1">
+        <Link
+          href="/"
+          className="p-1 transition-all hover:scale-105 hover:cursor-pointer  active:scale-95"
+        >
           <Image
             src={rmIcon}
             alt="Rhythm Merge Icon"
             width={64}
             height={64}
-            className="hover:shadow-rm-pink/50  transition-all hover:scale-105 hover:shadow-lg"
+            className=" hover:shadow-lg hover:shadow-rm-pink/50"
           />
-        </span>
-        <h1 className="text-normal text-rm-pink font-bold uppercase leading-none tracking-tight">
+        </Link>
+        <h1 className="text-normal font-bold uppercase leading-none tracking-tight text-rm-pink">
           Rhythm <br />
           Merge
         </h1>
@@ -38,7 +42,7 @@ function Navbar() {
           <SearchBar />
         </span>
       </header>
-      <div className="from-rm-yellow via-rm-orange to-rm-pink h-1 w-full justify-self-end bg-gradient-to-r"></div>
+      <div className="h-1 w-full justify-self-end bg-gradient-to-r from-rm-yellow via-rm-orange to-rm-pink"></div>
     </div>
   );
 }

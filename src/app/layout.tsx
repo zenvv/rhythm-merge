@@ -8,6 +8,10 @@ const heebo = Heebo({
 
 import "./globals.css";
 import Navbar from "@/components/main/navbar/Navbar";
+import { Suspense } from "react";
+import Loading from "./loading";
+import Link from "next/link";
+import Footer from "@/components/main/Footer";
 
 export const metadata: Metadata = {
   title: "Rhythm Merge",
@@ -21,13 +25,13 @@ export default function RootLayout({
 }>) {
   return (
     <html className={heebo.className} lang="en">
-      <body className=" flex h-full w-full flex-col items-center justify-center">
-        <nav className="h-full w-full">
-          <Navbar />
-        </nav>
-        <main className="mt-32 flex h-full w-full max-w-5xl flex-1 items-center justify-center">
+      <body className=" flex h-screen w-full flex-col items-center justify-start">
+        <Navbar />
+
+        <main className="mt-32 flex max-w-5xl flex-1 flex-col items-start justify-start">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );

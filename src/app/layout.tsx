@@ -25,10 +25,10 @@ export default function RootLayout({
 }>) {
   return (
     <html className={heebo.className} lang="en">
-      <body className=" flex h-screen w-full flex-col items-center justify-start">
+      <body className="flex min-h-screen flex-col items-start justify-start">
         <Navbar />
 
-        <main className="mt-32 flex max-w-5xl flex-1 flex-col items-start justify-start">
+        <main className="mx-auto mt-[72px] h-full w-full max-w-5xl flex-1 ">
           {children}
         </main>
         <Footer />

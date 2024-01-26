@@ -7,11 +7,11 @@ function SearchBar() {
       <Input
         type="search"
         placeholder="Search..."
-        className="dark  bg-zinc-950 pl-8 pr-4 text-zinc-100 placeholder:text-zinc-700"
+        className=" bg-background pl-8 pr-4"
       />
       <LuSearch
         size="16"
-        className="absolute left-0 top-0 m-2.5 rounded-sm text-zinc-500 transition-all group-hover:scale-[105%] group-hover:text-zinc-100"
+        className="absolute left-0 top-0 m-2.5 rounded-sm text-muted-foreground transition-all group-hover:scale-[105%] "
       />
     </div>
   );
